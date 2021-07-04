@@ -416,4 +416,22 @@ Public Class frmMain
         ' Actualiza la pantalla, para que se redibuje el fondo (Logo)
         Me.Refresh()
     End Sub
+
+    Private Sub BarButtonItem1_ItemClick(sender As Object, e As ItemClickEventArgs) Handles BarButtonItem1.ItemClick
+        'My.Forms.p_usr.MdiParent = Me
+        'My.Forms.p_usr.Show()
+        'My.Forms.p_usr.WindowState = FormWindowState.Maximized
+
+        ' Verifica esta cargado el formulario
+        If Not BuscarForma("frmReparto") Then
+            Cursor = System.Windows.Forms.Cursors.WaitCursor
+            Dim frmReparto As New dllReparto.frmReparto()
+
+            ' No esta activo el formulario, asi que lo muestra en pantalla
+            frmReparto.MdiParent = Me
+            frmReparto.Show()
+
+            Cursor = System.Windows.Forms.Cursors.Default
+        End If
+    End Sub
 End Class

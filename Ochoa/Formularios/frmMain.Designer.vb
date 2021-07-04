@@ -43,11 +43,12 @@ Partial Class frmMain
         Me.bsiBaseDatos1 = New DevExpress.XtraBars.BarStaticItem()
         Me.bsiVersion = New DevExpress.XtraBars.BarStaticItem()
         Me.bsiVersion1 = New DevExpress.XtraBars.BarStaticItem()
+        Me.RibbonPage1 = New DevExpress.XtraBars.Ribbon.RibbonPage()
+        Me.RibbonPageGroup1 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.rsbStatusBar = New DevExpress.XtraBars.Ribbon.RibbonStatusBar()
         Me.imgMenu = New DevExpress.Utils.ImageCollection(Me.components)
         Me.AdornerUIManager1 = New DevExpress.Utils.VisualEffects.AdornerUIManager(Me.components)
-        Me.RibbonPage1 = New DevExpress.XtraBars.Ribbon.RibbonPage()
-        Me.RibbonPageGroup1 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
+        Me.BarButtonItem1 = New DevExpress.XtraBars.BarButtonItem()
         CType(Me.bvcArchivo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.bvcArchivo.SuspendLayout()
         Me.vccCuenta.SuspendLayout()
@@ -195,9 +196,9 @@ Partial Class frmMain
         '
         Me.rcoToolBar.ApplicationButtonDropDownControl = Me.bvcArchivo
         Me.rcoToolBar.ExpandCollapseItem.Id = 0
-        Me.rcoToolBar.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.rcoToolBar.ExpandCollapseItem, Me.rcoToolBar.SearchEditItem, Me.bsiUsuario, Me.bsiUsuario1, Me.bsiServidor, Me.bsiServidor1, Me.bsiPerfil, Me.bsiPerfil1, Me.bsiBaseDatos, Me.bsiBaseDatos1, Me.bsiVersion, Me.bsiVersion1})
+        Me.rcoToolBar.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.rcoToolBar.ExpandCollapseItem, Me.rcoToolBar.SearchEditItem, Me.bsiUsuario, Me.bsiUsuario1, Me.bsiServidor, Me.bsiServidor1, Me.bsiPerfil, Me.bsiPerfil1, Me.bsiBaseDatos, Me.bsiBaseDatos1, Me.bsiVersion, Me.bsiVersion1, Me.BarButtonItem1})
         Me.rcoToolBar.Location = New System.Drawing.Point(0, 0)
-        Me.rcoToolBar.MaxItemId = 128
+        Me.rcoToolBar.MaxItemId = 129
         Me.rcoToolBar.Name = "rcoToolBar"
         Me.rcoToolBar.Pages.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPage() {Me.RibbonPage1})
         Me.rcoToolBar.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.[True]
@@ -284,6 +285,18 @@ Partial Class frmMain
         Me.bsiVersion1.Id = 127
         Me.bsiVersion1.Name = "bsiVersion1"
         '
+        'RibbonPage1
+        '
+        Me.RibbonPage1.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() {Me.RibbonPageGroup1})
+        Me.RibbonPage1.Name = "RibbonPage1"
+        Me.RibbonPage1.Text = "RibbonPage1"
+        '
+        'RibbonPageGroup1
+        '
+        Me.RibbonPageGroup1.ItemLinks.Add(Me.BarButtonItem1)
+        Me.RibbonPageGroup1.Name = "RibbonPageGroup1"
+        Me.RibbonPageGroup1.Text = "RibbonPageGroup1"
+        '
         'rsbStatusBar
         '
         Me.rsbStatusBar.ItemLinks.Add(Me.bsiUsuario)
@@ -311,16 +324,11 @@ Partial Class frmMain
         '
         Me.AdornerUIManager1.Owner = Me
         '
-        'RibbonPage1
+        'BarButtonItem1
         '
-        Me.RibbonPage1.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() {Me.RibbonPageGroup1})
-        Me.RibbonPage1.Name = "RibbonPage1"
-        Me.RibbonPage1.Text = "RibbonPage1"
-        '
-        'RibbonPageGroup1
-        '
-        Me.RibbonPageGroup1.Name = "RibbonPageGroup1"
-        Me.RibbonPageGroup1.Text = "RibbonPageGroup1"
+        Me.BarButtonItem1.Caption = "BarButtonItem1"
+        Me.BarButtonItem1.Id = 128
+        Me.BarButtonItem1.Name = "BarButtonItem1"
         '
         'frmMain
         '
@@ -381,4 +389,5 @@ Partial Class frmMain
     Friend WithEvents RibbonPage1 As DevExpress.XtraBars.Ribbon.RibbonPage
     Friend WithEvents RibbonPageGroup1 As DevExpress.XtraBars.Ribbon.RibbonPageGroup
     Friend WithEvents AdornerUIManager1 As DevExpress.Utils.VisualEffects.AdornerUIManager
+    Friend WithEvents BarButtonItem1 As DevExpress.XtraBars.BarButtonItem
 End Class

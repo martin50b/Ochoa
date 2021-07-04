@@ -244,6 +244,10 @@
       <Project>{d2d2b388-3dc2-4cbb-a7fb-282f74815341}</Project>
       <Name>dllMsSQL</Name>
     </ProjectReference>
+    <ProjectReference Include="..\dllReparto\dllReparto\dllReparto.vbproj">
+      <Project>{bbf002b7-5716-4add-9fe2-270396e72b89}</Project>
+      <Name>dllReparto</Name>
+    </ProjectReference>
     <ProjectReference Include="..\dllUsuarios\dllUsuarios.vbproj">
       <Project>{68cfe7b1-cadb-4bfa-b4c2-1b60a15509f1}</Project>
       <Name>dllUsuarios</Name>
