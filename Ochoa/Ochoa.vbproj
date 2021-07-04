@@ -150,6 +150,7 @@
     </Compile>
     <Compile Include="Modulos\Inicio.vb" />
     <Compile Include="Modulos\General.vb" />
+    <Compile Include="Modulos\Module1.vb" />
     <Compile Include="Modulos\RegistroWin.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
