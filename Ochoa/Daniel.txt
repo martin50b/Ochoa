@@ -1,0 +1,122 @@
+¡Qué tal!
+Les comparto también los scripts de las tablas que yo he usado:
+
+
+Inventario: Con la columna Peso.
+IF OBJECT_ID ('dbo.Inventario') IS NOT NULL
+DROP TABLE dbo.Inventario
+GO
+
+
+CREATE TABLE dbo.Inventario
+(
+Codigo      VARCHAR (15) NOT NULL,
+Categoria   INT NULL,
+Tipo        INT NULL,
+Descripcion VARCHAR (50) NOT NULL,
+ClaveA      VARCHAR (15) NULL,
+Unidad      VARCHAR (5) NULL,
+ClaveSAT    VARCHAR (8) NULL,
+UnidadSAT   VARCHAR (3) NULL,
+Costo       DECIMAL (10, 4) DEFAULT ((0.0)) NULL,
+CostoM      DECIMAL (10, 4) DEFAULT ((0.0)) NULL,
+CostoU      DECIMAL (10, 4) DEFAULT ((0.0)) NULL,
+Bajo        DECIMAL (10, 4) DEFAULT ((0.0)) NULL,
+Medio       DECIMAL (10, 4) DEFAULT ((0.0)) NULL,
+Normal      DECIMAL (10, 4) DEFAULT ((0.0)) NULL,
+Stock       INT DEFAULT ((0)) NULL,
+Caja        DECIMAL (10, 2)  NULL,
+NoCaja      INT NULL DEFAULT 1,
+Peso DECIMAL (10,4) DEFAULT ((0.0)) NULL,
+Minimo      INT NULL,
+Maximo      INT NULL,
+Lugar       VARCHAR (30) NULL,
+Foto        VARCHAR (40) NULL,
+bIVA        INT NULL,
+bIEPS       INT NULL,
+bComision   INT NULL,
+DiasVig     INT NULL,
+Uso         INT NULL,
+Linea       INT NULL,
+Servicio    INT NULL,
+PorDev      INT NULL,
+CCarga      INT NULL,
+Divisor     DECIMAL (10, 2) DEFAULT ((0.0)) NULL,
+fila        INT DEFAULT 0,
+EAN         VARCHAR (30) NULL,
+PRIMARY KEY (Codigo),
+UNIQUE (Codigo)
+)
+GO
+
+
+Tipos
+IF OBJECT_ID ('dbo.Tipos') IS NOT NULL
+DROP TABLE dbo.Tipos
+GO
+
+
+CREATE TABLE dbo.Tipos
+(
+Tipo      FLOAT NULL,
+Nombre    NVARCHAR (255) NULL,
+Categoría FLOAT NULL
+)
+GO
+
+
+Categorías
+IF OBJECT_ID ('dbo.Categorias') IS NOT NULL
+DROP TABLE dbo.Categorias
+GO
+
+
+CREATE TABLE dbo.Categorias
+(
+Categoría FLOAT NULL,
+Nombre    NVARCHAR (255) NULL
+)
+GO
+
+
+Proveedores (Pendiente)
+IF OBJECT_ID ('dbo.Proveedores') IS NOT NULL
+DROP TABLE dbo.Proveedores
+GO
+
+
+CREATE TABLE dbo.Proveedores
+(
+Clave       NVARCHAR (255) NULL,
+Nombre      NVARCHAR (255) NULL,
+RFC         NVARCHAR (255) NULL,
+Contacto1   NVARCHAR (255) NULL,
+Contacto2   NVARCHAR (255) NULL,
+Calle       NVARCHAR (255) NULL,
+Ciudad      NVARCHAR (255) NULL,
+Teléfono    NVARCHAR (255) NULL,
+Teléfono2   NVARCHAR (255) NULL,
+Celular     NVARCHAR (255) NULL,
+Fax         NVARCHAR (255) NULL,
+Email       NVARCHAR (255) NULL,
+CondPago    NVARCHAR (255) NULL,
+Banco       NVARCHAR (255) NULL,
+Observacion NVARCHAR (255) NULL
+)
+GO
+
+
+Materiales
+IF OBJECT_ID ('dbo.Materiales') IS NOT NULL
+DROP TABLE dbo.Materiales
+GO
+
+
+CREATE TABLE dbo.Materiales
+(
+Producto   NVARCHAR (255) NULL,
+Cantidad   FLOAT NULL,
+Material   NVARCHAR (255) NULL,
+Disponible FLOAT NULL
+)
+GO

@@ -1,0 +1,61 @@
+Buena tarde,
+
+Ya se encuentra en GIT la función para registro de la traza de auditoria, para llamarla solo es agregar esta línea donde que quieran invocarla
+
+ 
+
+AddBitacora("Login.vb", txtUsuario.Text.Trim, "el usuario indicado intento acceder con credenciales incorrectas")
+
+ 
+
+ 
+
+Adicional deben crear en la BD la tabla Bitacora de acuerdo al siguiente script.
+
+ 
+
+/****** Object:  Table [dbo].[Bitacora]    Script Date: 16/04/2021 06:06:50 p. m. ******/
+
+SET ANSI_NULLS ON
+
+GO
+
+ 
+
+SET QUOTED_IDENTIFIER ON
+
+GO
+
+ 
+
+CREATE TABLE [dbo].[Bitacora](
+
+       [idBitacora] [int] IDENTITY(1,1) NOT NULL,
+
+       [Modulo] [nchar](40) NULL,
+
+       [Detalle] [nvarchar](300) NULL,
+
+       [Usuario] [nchar](20) NULL,
+
+       [Fecha] [datetime] NULL
+
+) ON [PRIMARY]
+
+GO
+
+ 
+
+ALTER TABLE [dbo].[Bitacora] ADD  CONSTRAINT [DF_Bitacora_Fecha]  DEFAULT (getdate()) FOR [Fecha]
+
+GO
+
+ 
+
+ 
+
+ 
+
+
+ Libre de vir
+ 
